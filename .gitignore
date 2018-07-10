@@ -1,0 +1,15 @@
+*.iml
+*.log
+*.lst
+.idea
+.vscode
+.DS_Store
+.project
+.classpath
+.settings
+bin
+public
+target
+node_modules
+db
+.retry
