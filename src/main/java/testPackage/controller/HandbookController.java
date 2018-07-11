@@ -32,6 +32,11 @@ public class HandbookController {
     return handbookManager.getHandbook(id);
   }
 
+  @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
+  public List<Handbook> getAll() {
+    return handbookManager.getAll();
+  }
+
   private static String safeToStr(Object d) {
     return d != null ? d.toString() : null;
   }

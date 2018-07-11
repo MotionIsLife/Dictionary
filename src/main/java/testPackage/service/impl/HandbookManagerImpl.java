@@ -33,6 +33,11 @@ public class HandbookManagerImpl implements HandbookManager {
     return handbookRepository.findOne(id);
   }
 
+  @Override
+  public List<Handbook> getAll() {
+    return handbookRepository.findAll();
+  }
+
   private Handbook saveHandbook(boolean isCreate, Handbook handbook, String name, String desc, List fields, List data) {
     handbook.setName(name);
     handbook.setUpdateDate(new Date());

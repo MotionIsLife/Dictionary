@@ -13,4 +13,6 @@ public interface HandbookManager {
   Handbook createHandbook(String name, String desc, List fields, List data);
 
   Handbook getHandbook(Integer id);
+
+  List<Handbook> getAll();
 }
