@@ -14,6 +14,7 @@
     <spring.data.version>1.11.9.RELEASE</spring.data.version>
     <hibernate.version>5.1.4.Final</hibernate.version>
     <aspectjweaver.version>1.8.10</aspectjweaver.version>
+    <mysql.version>5.1.29</mysql.version>
   </properties>
 
   <dependencies>
@@ -74,6 +75,11 @@
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>${aspectjweaver.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
     </dependency>
   </dependencies>
 
