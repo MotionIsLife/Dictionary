@@ -23,3 +23,8 @@ Dictionary uses a number of projects to work properly:
    [Spring JPA]: <http://daringfireball.net/projects/markdown/>
    [Hibernate]: <https://github.com/markdown-it/markdown-it>
    [MySQL]: <http://ace.ajax.org>
+
+
+TODO:
+ - [x] inject spring data with mysql
+ - [ ] inject kafka
