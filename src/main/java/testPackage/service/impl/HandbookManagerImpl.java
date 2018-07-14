@@ -3,6 +3,7 @@ package testPackage.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import testPackage.repository.HandbookFieldsRepository;
 import testPackage.repository.HandbookRepository;
 import testPackage.service.HandbookManager;
@@ -36,6 +37,42 @@ public class HandbookManagerImpl implements HandbookManager {
   @Override
   public List<Handbook> getAll() {
     return handbookRepository.findAll();
+  }
+
+  // FIXME: 14.07.18
+  public Handbook createHandbook(Handbook handbook) {
+    handbookRepository.save(handbook);
+    return handbook;
+  }
+
+  @Override
+  public Handbook updateHandbook(Handbook handbook) {
+    Handbook result = handbookRepository.getOne(handbook.getId());
+    if(result != null) {
+      result.setName(handbook.getName());
+    }
+    handbookRepository.save(result);
+
+    if(!CollectionUtils.isEmpty(handbook.getFields())) {
+      for (HandbookField handbookField : handbook.getFields()) {
+        HandbookField foundHandbookField = null;
+        if(handbookField.getId() != null) {
+          foundHandbookField = handbookFieldsRepository.getOne(handbookField.getId());
+        }
+        if(foundHandbookField == null) {
+          handbookField.setHandbook(result);
+          handbookFieldsRepository.save(handbookField);
+          result.getFields().add(handbookField);
+        } else {
+          foundHandbookField.setType(handbookField.getType());
+          foundHandbookField.setKeyHandbook(handbookField.getKeyHandbook());
+          foundHandbookField.setName(handbookField.getName());
+          handbookFieldsRepository.save(foundHandbookField);
+          result.getFields().add(foundHandbookField);
+        }
+      }
+    }
+    return result;
   }
 
   private Handbook saveHandbook(boolean isCreate, Handbook handbook, String name, String desc, List fields, List data) {

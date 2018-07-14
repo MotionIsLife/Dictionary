@@ -1,0 +1,42 @@
+{
+  "id": 2,
+  "name": "Новый справочник",
+  "fields": [
+    {
+      "id": 1,
+      "type": "STRING",
+      "name": "1",
+      "keyHandbook": "k999"
+    },
+    {
+      "type": "STRING",
+      "name": "nameField12",
+      "keyHandbook": "keyHandbook"
+    },
+    {
+      "type": "STRING",
+      "name": "nameField13",
+      "keyHandbook": "keyHandbook"
+    },
+    {
+      "type": "STRING",
+      "name": "nameField14",
+      "keyHandbook": "keyHandbook"
+    },
+    {
+      "type": "STRING",
+      "name": "nameField15",
+      "keyHandbook": "keyHandbook"
+    },
+    {
+      "type": "STRING",
+      "name": "nameField16",
+      "keyHandbook": "keyHandbook"
+    },
+    {
+      "type": "STRING",
+      "name": "nameField17",
+      "keyHandbook": "keyHandbook"
+    }
+  ]
+}

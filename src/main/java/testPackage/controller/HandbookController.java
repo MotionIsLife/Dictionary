@@ -27,6 +27,19 @@ public class HandbookController {
       return res.getId();
   }
 
+  @PostMapping(value = "/update", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
+  public Integer update(@RequestBody Handbook handbook) {
+    Handbook res = handbookManager.updateHandbook(handbook);
+    return res.getId();
+  }
+
+  // FIXME: 14.07.18
+  @PostMapping(value = "/create2", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
+  public Integer create2(@RequestBody Handbook handbook) {
+    Handbook res = handbookManager.createHandbook(handbook);
+    return res.getId();
+  }
+
   @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
   public Handbook details(@PathVariable("id") Integer id) {
     return handbookManager.getHandbook(id);

@@ -15,4 +15,8 @@ public interface HandbookManager {
   Handbook getHandbook(Integer id);
 
   List<Handbook> getAll();
+
+  Handbook createHandbook(Handbook handbook);
+
+  Handbook updateHandbook(Handbook handbook);
 }
