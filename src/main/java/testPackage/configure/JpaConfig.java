@@ -1,7 +1,6 @@
 package testPackage.configure;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -31,10 +30,8 @@ public class JpaConfig {
 
   private String[] entityPackagesToScan = {"testPackage"};
 
-
   private static final String PROP_HIBERNATE_DIALECT = "db.hibernate.dialect";
   private static final String PROP_HIBERNATE_SHOW_SQL = "db.hibernate.show_sql";
-  //private static final String PROP_ENTITYMANAGER_PACKAGES_TO_SCAN = "db.entitymanager.packages.to.scan";
   private static final String PROP_HIBERNATE_HBM2DDL_AUTO = "db.hibernate.hbm2ddl.auto";
   private static final String PROP_HIBERNATE_FORMAT_SQL = "db.hibernate.format_sql";
 
