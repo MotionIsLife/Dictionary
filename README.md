@@ -26,5 +26,6 @@ Dictionary uses a number of projects to work properly:
 
 
 TODO:
- - [x] inject spring data with mysql
- - [ ] inject kafka
+ - [x] inject Spring Data with MySql
+ - [ ] inject Spring Security
+ - [ ] inject Kafka
