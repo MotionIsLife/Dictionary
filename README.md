@@ -17,6 +17,7 @@ Dictionary uses a number of projects to work properly:
 * [MySQL] - fast node.js network app framework [@tjholowaychuk]
 
    [Spring]: <https://spring.io>
+   [SpringBoot]: <https://docs.spring.io/spring-boot/docs/1.5.x/reference/html/>
    [Spring Security]: <https://github.com/joemccann/dillinger.git>
    [Spring Data]: <http://daringfireball.net>
    [Spring JPA]: <http://daringfireball.net/projects/markdown/>
