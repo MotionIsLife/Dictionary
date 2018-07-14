@@ -12,6 +12,7 @@ import testPackage.vo.HandbookField;
 import testPackage.vo.HandbookFieldsTypes;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Component
 @SuppressWarnings("unused")
@@ -39,9 +40,14 @@ public class HandbookManagerImpl implements HandbookManager {
     return handbookRepository.findAll();
   }
 
-  // FIXME: 14.07.18
   public Handbook createHandbook(Handbook handbook) {
+    handbook.setUpdateDate(new Date());
     handbookRepository.save(handbook);
+    if(!CollectionUtils.isEmpty(handbook.getFields())) {
+      handbook.getFields().forEach(handbookField -> handbookField.setHandbook(handbook));
+      List<HandbookField> handbookFields = handbookFieldsRepository.save(handbook.getFields());
+      handbook.setFields(new HashSet<>(handbookFields));
+    }
     return handbook;
   }
 
