@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  * DataSourceConfig
  */
 @Configuration
-@PropertySource("classpath:application-dev_postgres.properties")
+@PropertySource("classpath:application-dev_postgres.properties")// FIXME: 14.07.18 удалить упоминание о postgres, либо разрулить через профиля, добавив возможность использования postgres, h2
 public class DataSourceConfig {
 
   @Resource
