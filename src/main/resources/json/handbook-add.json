@@ -1,18 +1,13 @@
 {
   "info": {
-    "header": "Справочник",
-    "description": "Описание"
+    "header": "Справочник 2",
+    "description": "Описание 2"
   },
   "fields": [
     {
       "type": "STRING",
-      "name": "1",
+      "name": "name14",
       "keyHandbook": "k0"
-    }
-  ],
-  "data": [
-    {
-      "k0": "ываыва"
     }
   ]
 }
