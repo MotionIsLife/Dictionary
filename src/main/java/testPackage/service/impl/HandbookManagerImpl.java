@@ -50,7 +50,7 @@ public class HandbookManagerImpl implements HandbookManager {
         HandbookField field = new HandbookField();
         if (fMap.get("id") != null)
           field = handbookFieldsRepository.findOne(Integer.parseInt(fMap.get("id").toString()));
-        field.setKey(fMap.get("key").toString());
+        field.setKeyHandbook(fMap.get("keyHandbook").toString());
         field.setName(fMap.get("name").toString());
         if (fMap.get("type") != null)
           field.setType(HandbookFieldsTypes.valueOf(fMap.get("type").toString()));

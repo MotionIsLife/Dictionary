@@ -3,7 +3,6 @@ package testPackage.vo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * Сущность "Поле справочника" - описание полей справочников
@@ -23,8 +22,8 @@ public class HandbookField extends AbstractEntity {
   @Enumerated(EnumType.STRING)
   private HandbookFieldsTypes type;
 
-  @Column(name = "key", length = 32, nullable = false)
-  private String key;
+  @Column(name = "keyHandbook", length = 32, nullable = false)
+  private String keyHandbook;
 
   @JsonIgnore
   @ManyToOne(fetch = FetchType.LAZY)
@@ -47,12 +46,12 @@ public class HandbookField extends AbstractEntity {
     this.type = type;
   }
 
-  public String getKey() {
-    return key;
+  public String getKeyHandbook() {
+    return keyHandbook;
   }
 
-  public void setKey(String key) {
-    this.key = key;
+  public void setKeyHandbook(String keyHandbook) {
+    this.keyHandbook = keyHandbook;
   }
 
   public Handbook getHandbook() {
