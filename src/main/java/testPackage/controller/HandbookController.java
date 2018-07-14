@@ -33,8 +33,8 @@ public class HandbookController {
     return res.getId();
   }
 
-  @PostMapping(value = "/create2", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
-  public Integer create2(@RequestBody Handbook handbook) {
+  @PostMapping(value = "/createHandbook", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_JSON_UTF8_VALUE})
+  public Integer createHandbook(@RequestBody Handbook handbook) {
     Handbook res = handbookManager.createHandbook(handbook);
     return res.getId();
   }
